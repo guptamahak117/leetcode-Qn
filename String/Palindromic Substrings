@@ -1,0 +1,29 @@
+class Solution {
+public:
+    bool ispalindrome(string &substring){
+          int j=0;
+            int k=substring.length()-1;
+            while(j<=k){
+                if(substring[j]!=substring[k]){
+                   return false;
+                }
+                j++;
+                k--;
+            }    
+        return true;    
+    } 
+
+    int countSubstrings(string s){
+         int count=0;
+        for(int i=0;i<s.length();i++){
+            for(int j=0;j<=i;j++){
+                string substring=s.substr(j,i-j+1);
+                if(ispalindrome(substring)){
+                count++;
+                }
+            }
+        }
+    return count;
+    }
+};       
+          
