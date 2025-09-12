@@ -1,0 +1,21 @@
+class Solution {
+public:
+    void sortColors(vector<int>& nums) {
+        int i = 0;                 // current index
+        int k = 0;                 // boundary for 0s
+        int j = nums.size() - 1;   // boundary for 2s
+
+        while (i <= j) {           // process all elements
+            if (nums[i] == 0) {
+                swap(nums[i], nums[k]);
+                i++;
+                k++;
+            } else if (nums[i] == 1) {
+                i++;               // just move forward
+            } else { // nums[i] == 2
+                swap(nums[i], nums[j]);
+                j--;               // do not increment i, check swapped element
+            }
+        }
+    }
+};
