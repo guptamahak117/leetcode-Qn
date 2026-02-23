@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int missingNumber(vector<int>& nums) {
+    int missingNumber(vector<int>&nums) {
         int sum=0;
         int tot_sum=0;
          int n=nums.size();
@@ -15,4 +15,3 @@ public:
     }    
     
 };
-////////
