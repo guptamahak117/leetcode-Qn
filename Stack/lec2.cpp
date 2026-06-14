@@ -108,46 +108,47 @@ using namespace std;
 
 
 //sort a stack
-void insertSorted(stack<int>&s,int target){
-    if(s.empty()){
-        s.push(target);
-        return;
-    }
-    if(s.top()>=target){
-        s.push(target);
-        return;
+// void insertSorted(stack<int>&s,int target){
+//     if(s.empty()){
+//         s.push(target);
+//         return;
+//     }
+//     if(s.top()>=target){
+//         s.push(target);
+//         return;
 
-    }
-    int topele=s.top();
-    s.pop();
-    insertSorted(s,target);
-    s.push(topele);
-}
-void sortstack(stack<int> &s){
-    //base case
-    if(s.empty()){
-        return;
-    }
-    int topele=s.top();
-    s.pop();
-    sortstack(s);
-    insertSorted(s,topele);
-}
-int main(){
-    stack <int> s;
-    s.push(4);
-    s.push(2);
-    s.push(8);
-    s.push(5);
-    s.push(9);
-    sortstack(s);
-    cout<<"printing:"<<endl;
-    while(!s.empty()){
-        cout<<s.top()<<endl;
-        s.pop();
-    }
-    return 0;
-} 
+//     }
+//     int topele=s.top();
+//     s.pop();
+//     insertSorted(s,target);
+//     s.push(topele);
+// }
+// void sortstack(stack<int> &s){
+//     //base case
+//     if(s.empty()){
+//         return;
+//     }
+//     int topele=s.top();
+//     s.pop();
+//     sortstack(s);
+//     insertSorted(s,topele);
+// }
+// int main(){
+//     stack <int> s;
+//     s.push(4);
+//     s.push(2);
+//     s.push(8);
+//     s.push(5);
+//     s.push(9);
+//     sortstack(s);
+//     cout<<"printing:"<<endl;
+//     while(!s.empty()){
+//         cout<<s.top()<<endl;
+//         s.pop();
+//     }
+//     return 0;
+// } 
    
 
+  // remove redundant brackets
   
