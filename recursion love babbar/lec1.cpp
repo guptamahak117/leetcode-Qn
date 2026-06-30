@@ -37,7 +37,7 @@ using namespace std ;
 //     int ans=power(n);
 //     cout<<ans<<endl;
 // }
-//print counting
+//print counting//
 void counting(int n){
     if (n<1){
         return ;

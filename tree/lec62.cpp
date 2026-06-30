@@ -40,16 +40,13 @@ void levelordertraversal(Node* root){
     q.push(NULL);
     while (!q.empty()){
         Node* temp=q.front();
-        
         q.pop();
-
         if(temp==NULL){
             //purana level complete traverse ho chuka h
             cout<<endl;
             if(!q.empty()){
                 //queue still has some nodes
                 q.push(NULL);
-
             }
         }
         else{
@@ -76,4 +73,4 @@ int main() {
 
     return 0;
 }
-//reverse order traversal read and code by yourself-hw
+// //reverse order traversal read and code by yourself-hw
