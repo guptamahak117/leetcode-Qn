@@ -111,4 +111,4 @@ using namespace std;
 //     transpose(a,3,3,transposearr);
 // }
 
-//sort 0's 1's 2's
+//sort 0's 1's 2's//
