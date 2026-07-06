@@ -9,6 +9,6 @@ public:
             }
             numMap[nums[i]] = i;
         }
-        return {}; // not expected to reach here as per problem statement
+        return {}; 
     }
 };
