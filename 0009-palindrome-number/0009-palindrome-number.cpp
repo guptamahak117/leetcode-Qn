@@ -1,4 +1,4 @@
-class Solution {
+                                                                                                                                                                                                                                                                                                                    class Solution {
 public:
     bool isPalindrome(int x) {
         string ans= to_string(int (x));
