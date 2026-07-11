@@ -1,28 +1,30 @@
 class Solution {
- public:
-  ListNode* swapPairs(ListNode* head) {
-    const int length = getLength(head);
-    ListNode dummy(0, head);
-    ListNode* prev = &dummy;
-    ListNode* curr = head;
-
-    for (int i = 0; i < length / 2; ++i) {
-      ListNode* next = curr->next;
-      curr->next = next->next;
-      next->next = prev->next;
-      prev->next = next;
-      prev = curr;
-      curr = curr->next;
+public:
+    vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
+        vector<vector<int>> result;
+        vector<int> current;
+        backtrack(candidates, target, 0, current, result);
+        return result;
     }
 
-    return dummy.next;
-  }
+private:
+    void backtrack(vector<int>& candidates, int target, int index,
+                   vector<int>& current, vector<vector<int>>& result) {
+        if (target == 0) {
+            result.push_back(current);
+            return;
+        }
 
- private:
-  int getLength(ListNode* head) {
-    int length = 0;
-    for (ListNode* curr = head; curr; curr = curr->next)
-      ++length;
-    return length;
-  }
+        if (target < 0 || index >= candidates.size()) {
+            return;
+        }
+
+        // Include the current candidate
+        current.push_back(candidates[index]);
+        backtrack(candidates, target - candidates[index], index, current, result);  // pick again
+        current.pop_back();
+
+        // Skip the current candidate
+        backtrack(candidates, target, index + 1, current, result);  // move to next
+    }
 };
