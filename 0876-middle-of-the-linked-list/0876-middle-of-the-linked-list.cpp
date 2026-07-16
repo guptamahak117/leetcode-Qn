@@ -19,14 +19,7 @@ int getlength(ListNode* head){
             return len;
         }
     ListNode* middleNode(ListNode* head) {
-        // int getlength(ListNode* head){
-        //     int len=0;
-        //     while(head!=NULL){
-        //         len++;
-        //         head=head->next;
-        //     }
-        //     return len;
-        // }
+      
         int len=getlength(head);
         int ans=len/2;
         int cnt=0;
